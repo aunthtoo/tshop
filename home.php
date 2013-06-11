@@ -3,7 +3,7 @@
 ?>
 
 		<div id="aboutUs">
-
+			About us stuff here content content content
 		</div>
 
 		<ul id="homePageCatalogue">

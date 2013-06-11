@@ -31,3 +31,66 @@ padding: 0;
 /*====================END NORMALIZE=============================*/
 
 
+
+
+body {
+
+}
+
+#container{
+	margin: 0 auto;
+	width: 800px;
+	background-color: #fff;
+}
+
+#header{
+	margin-top: 50px;
+	border-bottom: 1px #000 solid;
+	background-color: #ccc;
+}
+
+#logo{
+	height: 100px;
+	width: 100px;
+	background-color: #000;
+	margin-bottom: 20px;
+}
+
+#header ul{
+	border: 1px green solid;
+}
+
+#header li{
+	display: inline-block;
+}
+
+#header #productNav{
+	width: 350px;
+}
+
+#header #productNav li {
+	margin-right: 50px;
+}
+
+#header #userNav{
+	width: 300px;
+}
+
+#header #userNav li {
+	margin-left: 50px;
+}
+
+#content{
+	clear: both;
+	margin-bottom: 100px;
+	margin-top: 100px;
+}
+
+#footer{
+	border-top: 1px #000 solid;
+}
+
+#footer li{
+	float: left;
+	margin-right: 50px;
+}
