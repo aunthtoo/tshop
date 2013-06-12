@@ -37,6 +37,10 @@ body {
 
 }
 
+.clear{
+	clear: both;
+}
+
 #container{
 	margin: 0 auto;
 	width: 800px;
@@ -46,7 +50,6 @@ body {
 #header{
 	margin-top: 50px;
 	border-bottom: 1px #000 solid;
-	background-color: #ccc;
 }
 
 #logo{
@@ -56,16 +59,17 @@ body {
 	margin-bottom: 20px;
 }
 
-#header ul{
-	border: 1px green solid;
+#header li{
+	float: left;
 }
 
-#header li{
-	display: inline-block;
+#header li a{
+	display: block;
 }
 
 #header #productNav{
 	width: 350px;
+	float: left;
 }
 
 #header #productNav li {
@@ -74,6 +78,7 @@ body {
 
 #header #userNav{
 	width: 300px;
+	float: right;
 }
 
 #header #userNav li {

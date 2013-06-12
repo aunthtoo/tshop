@@ -1,3 +1,12 @@
+<?php
+require_once("menuview.php");
+require_once("producttypemanager.php");
+
+$oMV=new MenuView();
+$oPTM=new ProductTypeManager();
+
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -19,21 +28,11 @@
 		</div>
 
 
-		<ul id="productNav">
+<?php
 
-			<li id="tees">
-				<a href="#">TEES</a>
-			</li>
+echo $oMV->render($oPTM->getAllProductTypes());
 
-			<li id="singlets">
-				<a href="#">SINGLETS</a>
-			</li>
-
-			<li id="hoodies">
-				<a href="#">HOODIES</a>
-			</li>
-
-		</ul>
+?>
 
 		<ul id="userNav">
 
@@ -46,6 +45,8 @@
 			</li>
 
 		</ul>
+
+		<div class="clear"></div>
 
 	</div>
 
