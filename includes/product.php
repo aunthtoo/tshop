@@ -61,40 +61,40 @@ class Product{
 	public function __get($sProperty){
 		switch($sProperty){
 			case "ID":
-			return $this->iProductID;
-			break;
+				return $this->iProductID;
+				break;
 			case "productType":
-			return $this->iProductTypeID;
-			break;
+				return $this->iProductTypeID;
+				break;
 			case "price":
-			return $this->fPrice;
-			break;
+				return $this->fPrice;
+				break;
 			case "stockLevel":
-			return $this->iStockLevel;
-			break;
+				return $this->iStockLevel;
+				break;
 			case "photo":
-			return $this->sPhoto;
-			break;
+				return $this->sPhoto;
+				break;
 			case "desc":
-			return $this->sDescription;
-			break;
+				return $this->sDescription;
+				break;
 			case "name":
-			return $this->sProductName;
-			break;
+				return $this->sProductName;
+				break;
 			case "active":
-			return $this->iActive;
-			break;
+				return $this->iActive;
+				break;
 			case "colours":
-			return $this->sColours;
-			break;
+				return $this->sColours;
+				break;
 			case "sizing":
-			return $this->sSizing;
-			break;
+				return $this->sSizing;
+				break;
 			case "dispOrder":
-			return $this->iDisplayOrder;
-			break;
-		default: 
-		die($sProperty ."cannot read from");
+				return $this->iDisplayOrder;
+				break;
+			default: 
+				die($sProperty ."cannot read from");
 		}
 	}
 

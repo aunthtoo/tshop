@@ -1,23 +1,20 @@
 <?php
 	require_once("includes/header.php");
-?>
+	require_once("includes/catalogueview.php");
+	require_once("includes/producttype.php");
 
-		<ul id="homePageCatalogue">
+	$oCV = new CatalogueView();
+	$iCurrentProductTypeID = 0;
+	if(isset($_GET[productTypeID])){
+		$iCurrentProductTypeID = $_GET[productTypeID];
+	}
+	$oPT = new ProductType();
+	$oPT->load($iCurrentProductTypeID);
 
-			<li>
-				<a href="#"> </a>
-			</li>
 
-			<li>
-				<a href="#"> </a>
-			</li>
+	// render out the products on the page
+	echo $oCV->render($oPT);
 
-			<li>
-				<a href="#"> </a>
-			</li>
 
-		</ul>
-<?php
 	require_once("includes/footer.php");
 ?>
- </html>

@@ -60,22 +60,22 @@ class ProductType{
 	public function __get($sProperty){
 		switch($sProperty){
 			case "ID":
-			return $this->iProductTypeID;
-			break;
+				return $this->iProductTypeID;
+				break;
 			case "name":
-			return $this->sProductTypeName;
-			break;
+				return $this->sProductTypeName;
+				break;
 			case "desc":
-			return $this->sProductTypeDescription;
-			break;
+				return $this->sProductTypeDescription;
+				break;
 			case "dispOrder":
-			return $this->iDisplayOrder;
-			break;
+				return $this->iDisplayOrder;
+				break;
 			case "products":
-			return $this->aProducts;
-			break;
-		default: 
-		die($sProperty ."cannot read from");
+				return $this->aProducts;
+				break;
+			default: 
+				die($sProperty ."cannot read from");
 		}
 	}
 

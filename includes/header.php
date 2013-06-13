@@ -27,17 +27,12 @@ $oPTM=new ProductTypeManager();
 
 		</div>
 
-
-<?php
-
-echo $oMV->render($oPTM->getAllProductTypes());
-
-?>
+		<?php echo $oMV->render($oPTM->getAllProductTypes()); ?>
 
 		<ul id="userNav">
 
 			<li id="loginRegister">
-				<a href="#">LOGIN / REGISTER</a>
+				<a href="register.php">LOGIN / REGISTER</a>
 			</li>
 
 			<li id="cart">
