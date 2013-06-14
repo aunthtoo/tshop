@@ -21,6 +21,45 @@
 			$this->sPassword = "";
 		}
 
+		public function load($iID){
+			$oDatabase = new Database();
+
+			$sSQL = "SELECT customerid, firstname, lastname, email, phone, deliveryaddress, password
+					FROM tbcustomer
+					WHERE customerid =".$iID;
+			$bResult = $oDatabase->query($sSQL);
+			$aCustomer = $oDatabase->fetch_array($bResult);
+
+			// assign aCustomer array into this objects attributes
+			$this->iCustomerID = $aCustomer["customerid"];
+			$this->sFirstName = $aCustomer["firstname"];
+			$this->sLastName = $aCustomer["lastname"];
+			$this->sEmail = $aCustomer["email"];
+			$this->sPhone = $aCustomer["phone"];
+			$this->sAddress = $aCustomer["deliveryaddress"];
+			$this->sPassword = $aCustomer["password"];
+
+			$oDatabase->close();
+		}
+
+		public function loadByEmail($sEmail){
+			$oDatabase = new Database();
+			$sSQL = "SELECT customerid, email
+					FROM tbcustomer
+					WHERE email = '".$sEmail."'";
+			$bResult = $oDatabase->query($sSQL);
+			$aArray = $oDatabase->fetch_array($bResult);
+			$oDatabase->close();
+
+			if($aArray == false){
+				return false;
+			}else{
+				$this->load($aArray["customerid"]);
+				return true;
+			}
+			
+		}
+
 		public function save(){
 			$oDatabase = new Database();
 
@@ -90,6 +129,23 @@
 
 	$oCustomer->save();
 
+	echo "<pre>";
+	print_r($oCustomer);
+	echo "</pre>";
+	*/
+
+	/*
+	$oCustomer = new Customer();
+	$oCustomer->load(4);
+
+	echo "<pre>";
+	print_r($oCustomer);
+	echo "</pre>";
+	*/
+
+	/*
+	$oCustomer = new Customer();
+	$oCustomer->loadByEmail("sam.birkhead@gmail.com");
 	echo "<pre>";
 	print_r($oCustomer);
 	echo "</pre>";

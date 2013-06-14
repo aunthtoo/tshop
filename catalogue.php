@@ -14,7 +14,8 @@
 
 	// render out the products on the page
 	echo $oCV->render($oPT);
-
-
+?>
+	<div class="clear"></div>
+<?php
 	require_once("includes/footer.php");
 ?>

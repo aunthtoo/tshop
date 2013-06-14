@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /*====================NORMALIZE=============================*/
-body, h1, h2, h3, h4, h5, h6, ul, li, em, strong, pre, code {
+body, h1, h2, h3, h4, h5, h6, ul, li, em, strong, pre, code{
 padding: 0; 
 margin: 0; 
 line-height: 1.5em;
@@ -22,7 +22,7 @@ border: 0;
 p {
 margin: 0 auto 1em;
 }
-input, button, select{
+input, button, select, textarea, fieldset{
 font: inherit;
 color: inherit;
 margin: 0;
@@ -34,7 +34,16 @@ padding: 0;
 
 
 body {
+	font-family: tahoma, arial, helvetica, sans-serif;
+}
 
+h1{
+	text-transform: uppercase;
+
+}
+
+a{
+	text-decoration: none;
 }
 
 .clear{
@@ -57,10 +66,15 @@ body {
 }
 
 #logo{
-	height: 100px;
-	width: 100px;
-	background-color: #000;
+	height: 120px;
+	width: 91px;
 	margin-bottom: 20px;
+	background-image: url("images/logo.jpg");
+	background-size: 91px 120px;
+	font-size: 0px;
+	display: block;
+	background-repeat: no-repeat;
+	background-position: center left;
 }
 
 #header li{
@@ -92,8 +106,8 @@ body {
 
 #content{
 	clear: both;
-	margin-bottom: 100px;
-	margin-top: 100px;
+	margin-bottom: 50px;
+	margin-top: 50px;
 }
 
 .productImage{
@@ -121,7 +135,7 @@ body {
 /* REGISTER FORM */
 
 label{
-	width: 100px;
+	width: 200px;
 	float: left;
 	clear: both;
 }
@@ -133,16 +147,61 @@ input{
 
 input[type=submit]{
 	clear: both;
+	margin-left: 200px;
+	width: 205px;
+}
+
+label, input, textarea, div.error{
+	margin-top: 7px;
 }
 
 textarea{
-	width: 200px;
+	width: 202px;
+	max-width: 202px;
 	height: 50px;
-	max-width: 200px;
 	max-height: 50px;
 	float: left;
 }
 
 div.error{
 	float:left;
+}
+
+.error{
+	color: red;
+	font-size: 0.8em;
+}
+
+
+/* CENTERED PAGES */
+
+.center{
+	margin-left: 200px;
+}
+
+.center img{
+	height: 279px;
+	width: auto;
+}
+
+/* HOME PAGE */
+
+div#aboutUs{
+	position: relative;
+}
+
+div#aboutUs p{
+	position: absolute;
+	top: 400px;
+	left: 50px;
+	color: #fff;
+	width: 700px;
+	font-size: 16px;
+
+
+}
+
+div#aboutUs img{
+	float: right;
+	width: 800px;
 }

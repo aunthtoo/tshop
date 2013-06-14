@@ -12,7 +12,7 @@ $oPTM=new ProductTypeManager();
 
   <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <title>Template Page</title>
+      <title>T Shop</title>
       <link href="assets/styles.css" rel="stylesheet" type="text/css" />
   </head>
 
@@ -23,9 +23,7 @@ $oPTM=new ProductTypeManager();
 
 	<div id="header">
 
-		<div id="logo">
-
-		</div>
+		<a href="home.php" id="logo"><h1>T Online</h1></a>
 
 		<?php echo $oMV->render($oPTM->getAllProductTypes()); ?>
 

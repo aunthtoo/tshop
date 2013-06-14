@@ -10,14 +10,17 @@
 		$iCurrentProductID = $_GET[productID];
 	}
 	$oProduct->load($iCurrentProductID);
-
-
-
-	// writes the code to display product details
-	echo $oPV->render($oProduct);
+?>
+	
+	<div class="center">
+		<?php
+		// writes the code to display product details
+		echo $oPV->render($oProduct);
+		?>
+	</div>
 
 
 	
-
+<?php
 	require_once("includes/footer.php");
 ?>

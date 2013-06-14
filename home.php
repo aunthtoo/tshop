@@ -3,24 +3,12 @@
 ?>
 
 		<div id="aboutUs">
-			About us stuff here content content content
+			<img src="assets/images/homepageimg_bnw.jpg" />
+			<p>We specialise in quality clothing at wholesale prices.
+				Whether you are looking to source large quantities of blank apparel for your brand,
+				or just looking for a few shirts to wear unprinted, then T Shop is your number one choice.</p>
 		</div>
-
-		<ul id="homePageCatalogue">
-
-			<li>
-				<a href="#"> </a>
-			</li>
-
-			<li>
-				<a href="#"> </a>
-			</li>
-
-			<li>
-				<a href="#"> </a>
-			</li>
-
-		</ul>
+		<div class="clear"></div>
 		
 <?php
 	require_once("includes/footer.php");

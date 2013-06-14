@@ -1,6 +1,5 @@
 </div>
 
-
 	<div id="footer">
 
 		<ul id="userNav">
