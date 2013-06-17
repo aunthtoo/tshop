@@ -87,6 +87,33 @@
 
 		}
 
+		public function __get($sProperty){
+			switch($sProperty){
+				case "ID":
+					return $this->iCustomerID;
+				case "firstname":
+					return $this->sFirstName;
+					break;
+				case "lastname":
+					return $this->sLastName;
+					break;
+				case "email":
+					return $this->sEmail;
+					break;
+				case "phone":
+					return $this->sPhone;
+					break;
+				case "address":
+					return $this->sAddress;
+					break;
+				case "password":
+					return $this->sPassword;
+					break;
+				default:
+					die($sProperty." is not allowed to be read");
+			}
+		}
+
 		public function __set($sProperty,$value){
 
 			switch($sProperty){

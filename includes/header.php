@@ -23,14 +23,14 @@ $oPTM=new ProductTypeManager();
 
 	<div id="header">
 
-		<a href="home.php" id="logo"><h1>T Online</h1></a>
+		<a href="home.php" id="logo">T Online</a>
 
 		<?php echo $oMV->render($oPTM->getAllProductTypes()); ?>
 
 		<ul id="userNav">
 
 			<li id="loginRegister">
-				<a href="register.php">LOGIN / REGISTER</a>
+				<a href="login.php">LOGIN / REGISTER</a>
 			</li>
 
 			<li id="cart">

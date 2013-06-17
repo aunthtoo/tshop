@@ -11,9 +11,11 @@ class CatalogueView{
 			$sHTML .= '<li>
 				<a href="productdetails.php?productID='.$oCurrentProduct->ID.'">
 				<img class="productImage" src="assets/images/'.$oCurrentProduct->photo.'" />
-				<p class="productTitle">'.$oCurrentProduct->name.'</p></a>
-				<p>$'.number_format($oCurrentProduct->price,2).'</p>
-				<p><a href="#">Add to Cart</a></p>
+				<div class="categorystyle">
+					<h2 class="productTitle">'.$oCurrentProduct->name.'</h2></a>
+					<p>$'.number_format($oCurrentProduct->price,2).'</p>
+					<p><a href="#">Add to Cart</a></p>
+				</div>
 			</li>';
 		}
 

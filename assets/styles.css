@@ -34,16 +34,76 @@ padding: 0;
 
 
 body {
-	font-family: tahoma, arial, helvetica, sans-serif;
+	font-family: Roboto Regular, tahoma, arial, helvetica, sans-serif;
+}
+
+@font-face {
+	font-family: 'Ostrich Regular';
+	src: url('fonts/ostrich-regular-webfont.eot');
+	src: local('Ostrich Regular'),
+		url('fonts/ostrich-regular-webfont.ttf') format('truetype'),
+		url('fonts/ostrich-regular-webfont.svg#font') format('svg');
+}
+
+
+@font-face {
+	font-family: 'Ostrich Black';
+	src: url('fonts/ostrich-black-webfont.eot');
+	src: local('Ostrich Black'),
+		url('fonts/ostrich-black-webfont.ttf') format('truetype'),
+		url('fonts/ostrich-black-webfont.svg#font') format('svg');
+}
+
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url('fonts/roboto-regular-webfont.eot');
+    src: local('Roboto Regular'),
+         local('Roboto'), 
+         url('fonts/roboto-regular-webfont.ttf') format('truetype'),
+         url('fontsroboto-regular-webfont.svg#font') format('svg'); 
+}
+
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url('fonts/roboto-bold-webfont.eot');
+    src: local('Roboto Bold'), 
+         url('fonts/roboto-bold-webfont.ttf') format('truetype'),
+         url('fontsroboto-bold-webfont.svg#font') format('svg'); 
 }
 
 h1{
 	text-transform: uppercase;
-
+	font-family: Ostrich Black;
+	font-size: 20px;
+	margin-bottom: 20px;
 }
 
 a{
 	text-decoration: none;
+	color: #000;
+}
+
+a:link {
+}
+
+a:visited {
+	color: #000;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+a:active {
+	text-decoration:underline;
+}
+
+p a:link {
+	color: steelblue;
+}
+
+p a:visited {
+	color: steelblue;
 }
 
 .clear{
@@ -52,6 +112,8 @@ a{
 
 .productTitle{
 	text-transform: uppercase;
+	font-family: Ostrich Black;
+	font-size: 20px;
 }
 
 #container{
@@ -63,18 +125,20 @@ a{
 #header{
 	margin-top: 50px;
 	border-bottom: 1px #000 solid;
+	font-family: Ostrich Black;
+	font-size: 35px;
 }
 
 #logo{
-	height: 120px;
-	width: 91px;
+	width: 300px;
+	height: 100px;
 	margin-bottom: 20px;
 	background-image: url("images/logo.jpg");
-	background-size: 91px 120px;
+	background-size: 300px auto;
 	font-size: 0px;
 	display: block;
 	background-repeat: no-repeat;
-	background-position: center left;
+	background-position: bottom left;
 }
 
 #header li{
@@ -86,7 +150,6 @@ a{
 }
 
 #header #productNav{
-	width: 350px;
 	float: left;
 	text-transform: uppercase;
 }
@@ -96,7 +159,6 @@ a{
 }
 
 #header #userNav{
-	width: 300px;
 	float: right;
 }
 
@@ -111,24 +173,71 @@ a{
 }
 
 .productImage{
-	height: 189px;
-	width: auto;
+	height: auto;
+	width: 130px;
 }
 
 #content ul#catalogue li{
 	float:left;
-	margin-right: 50px;
+	margin-right: 35px;
+	margin-left: 35px;
+	width: 130px;
 }
 
 #footer{
 	border-top: 1px #000 solid;
 	clear: both;
+	font-family: Roboto Bold;
+	line-height: 25px;
 }
 
-#footer li{
+#footer ul#userNav li{
+	margin-right: 35px;
+	float: left;
+}
+
+#footer div#icons{
+	float: right;
+}
+
+#footer div#icons a{
+	width: 25px;
+	height: 25px;
+	margin-left: 5px;
+	float: left;
+}
+
+#fb{
+	font-size: 0px;
+	background-image: url("images/fb.jpg");
+	background-size: 25px 25px;
+}
+
+#twitter{
+	font-size: 0px;
+	background-image: url("images/twitter.jpg");
+	width: 25px;
+	height: 25px;
+	background-size: 25px 25px;
+}
+
+
+
+div.productdetails img{
 	float: left;
 	margin-right: 50px;
 }
+
+div.productdetails div{
+	float: left;
+	width: 200px;
+	padding-top: 50px;
+}
+
+div.categorystyle{
+	margin-left: 15px;
+}
+
 
 
 
@@ -149,6 +258,8 @@ input[type=submit]{
 	clear: both;
 	margin-left: 200px;
 	width: 205px;
+	margin-top: 20px;
+	margin-bottom: 50px;
 }
 
 label, input, textarea, div.error{
@@ -171,7 +282,6 @@ div.error{
 	color: red;
 	font-size: 0.8em;
 }
-
 
 /* CENTERED PAGES */
 
@@ -197,8 +307,6 @@ div#aboutUs p{
 	color: #fff;
 	width: 700px;
 	font-size: 16px;
-
-
 }
 
 div#aboutUs img{

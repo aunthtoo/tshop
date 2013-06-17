@@ -19,8 +19,13 @@
 			<li id="">
 				<a href="#">WHOLESALE INFO</a>
 			</li>
-
 		</ul>
+		<div id="icons">
+
+			<a href="http://www.facebook.com" id="fb">Facebook</a>
+			<a href="http://www.twitter.com" id="twitter">Twitter</a>
+
+		</div>
 
 	</div>
 

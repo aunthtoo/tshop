@@ -3,7 +3,6 @@
 	require_once("includes/form.php");
 	require_once("includes/customer.php");
 
-	//print_r($_POST);
 	$oForm = new Form();
 
 
@@ -66,6 +65,8 @@
 		<?php 
 			echo $oForm->html;
 		?>
+
+	<p><a href="login.php">Already a member? Login now</a></p>
 	</div>
 
 
