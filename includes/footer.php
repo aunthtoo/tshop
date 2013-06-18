@@ -17,7 +17,7 @@
 			</li>
 
 			<li id="">
-				<a href="#">WHOLESALE INFO</a>
+				<a href="mydetails.php">WHOLESALE INFO</a>
 			</li>
 		</ul>
 		<div id="icons">

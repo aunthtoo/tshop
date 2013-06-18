@@ -12,8 +12,8 @@ if(isset($_POST["submit"])){
 		$oForm->raiseCustomErrors("email","* Email is incorrect");
 	}else{ // if email exists
 		if($oTestCustomer->password == $_POST["password"]){ // if passwords match
-			session_start;
-			$_SESSION["currentUser"] = $oTestCustomer->ID;
+			
+			$_SESSION['currentUser'] = $oTestCustomer->ID;
 			// redirect
 			header("Location:mydetails.php");
 			exit;

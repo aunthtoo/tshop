@@ -10,7 +10,7 @@ class ProductView{
 			<div>
 				<h2 class="productTitle">'.$oProduct->name.'</h2>
 				<p>$'.number_format($oProduct->price,2).'</p>
-				<p><a href="#">Add to cart</a></p>
+				<p><a href="#">add to cart</a></p>
 				<p>'.$oProduct->desc.'</p>
 			</div>
 		</div>';

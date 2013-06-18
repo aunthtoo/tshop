@@ -14,7 +14,7 @@ class CatalogueView{
 				<div class="categorystyle">
 					<h2 class="productTitle">'.$oCurrentProduct->name.'</h2></a>
 					<p>$'.number_format($oCurrentProduct->price,2).'</p>
-					<p><a href="#">Add to Cart</a></p>
+					<p><a href="#">add to cart</a></p>
 				</div>
 			</li>';
 		}

@@ -81,7 +81,21 @@
 					die($sSQL." has failed");
 				}
 
-			}//else{update}
+			}else{
+				//update
+				$sSQL = "UPDATE tbcustomer
+					SET firstname = '".$this->sFirstName."',
+						lastname = '".$this->sLastName."',
+						phone = '".$this->sPhone."',
+						deliveryaddress = '".$this->sAddress."',
+						password = '".$this->sPassword."' 
+					WHERE customerid = ". $this->iCustomerID;
+
+					$bResult = $oDatabase->query($sSQL);
+					if($bResult == false){
+						die($sSQL." has failed");
+					}
+			}
 
 			$oDatabase->close();
 

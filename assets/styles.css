@@ -38,13 +38,30 @@ body {
 }
 
 @font-face {
+	font-family: 'Comic Zine';
+	src: url('fonts/comic_zine_ot-webfont.eot');
+	src: local('Comic Zine OT'),
+		local('Comic Zine'),
+		url('fonts/comic_zine_ot-webfont.ttf') format('truetype'),
+		url('fonts/comic_zine_ot-webfont.svg#font') format('svg');
+}
+
+@font-face {
+	font-family: 'Grand Hotel';
+	src: url('fonts/GrandHotel-Regular-webfont.eot');
+	src: local('Grand Hotel'),
+		local('GrandHotel'),
+		url('fonts/GrandHotel-Regular-webfont.ttf') format('truetype'),
+		url('fonts/GrandHotel-Regular-webfont.svg#font') format('svg');
+}
+
+@font-face {
 	font-family: 'Ostrich Regular';
 	src: url('fonts/ostrich-regular-webfont.eot');
 	src: local('Ostrich Regular'),
 		url('fonts/ostrich-regular-webfont.ttf') format('truetype'),
 		url('fonts/ostrich-regular-webfont.svg#font') format('svg');
 }
-
 
 @font-face {
 	font-family: 'Ostrich Black';
@@ -78,6 +95,17 @@ h1{
 	margin-bottom: 20px;
 }
 
+p.logout{
+	font-size: 14px;
+	float: right;
+	margin-top: 5px;
+}
+
+p.logout a:link{
+	font-size: 14px;
+	font-family: Roboto Regular;
+}
+
 a{
 	text-decoration: none;
 	color: #000;
@@ -99,11 +127,14 @@ a:active {
 }
 
 p a:link {
-	color: steelblue;
+	color: #0085B2;
+	font-family: Grand Hotel;
+	font-weight: bold;
+	font-size: 25px;
 }
 
 p a:visited {
-	color: steelblue;
+	color: #0085B2;
 }
 
 .clear{
@@ -123,22 +154,22 @@ p a:visited {
 }
 
 #header{
-	margin-top: 50px;
+	padding-top: 100px;
 	border-bottom: 1px #000 solid;
 	font-family: Ostrich Black;
 	font-size: 35px;
 }
 
 #logo{
-	width: 300px;
-	height: 100px;
+	height: 80px;
 	margin-bottom: 20px;
-	background-image: url("images/logo.jpg");
-	background-size: 300px auto;
-	font-size: 0px;
+	font-size: 100px;
 	display: block;
+	background-image: url("images/logo.jpg");
+	background-size: auto auto;
 	background-repeat: no-repeat;
 	background-position: bottom left;
+	font-size: 0px;
 }
 
 #header li{
@@ -174,14 +205,14 @@ p a:visited {
 
 .productImage{
 	height: auto;
-	width: 130px;
+	width: 150px;
 }
 
 #content ul#catalogue li{
 	float:left;
-	margin-right: 35px;
-	margin-left: 35px;
-	width: 130px;
+	margin-right: 25px;
+	margin-left: 25px;
+	width: 150px;
 }
 
 #footer{
@@ -238,7 +269,9 @@ div.categorystyle{
 	margin-left: 15px;
 }
 
-
+ul.details{
+	margin-bottom: 50px;
+}
 
 
 /* REGISTER FORM */
@@ -312,4 +345,15 @@ div#aboutUs p{
 div#aboutUs img{
 	float: right;
 	width: 800px;
+}
+
+/* MY DETAILS PAGE */
+
+ul li span.label{
+	width: 200px;
+	display: inline-block;
+}
+
+ul li span.detail{
+	color: #0085B2;
 }

@@ -1,6 +1,8 @@
 <?php
+session_start();
 require_once("menuview.php");
 require_once("producttypemanager.php");
+require_once("customer.php");
 
 $oMV=new MenuView();
 $oPTM=new ProductTypeManager();
@@ -19,18 +21,31 @@ $oPTM=new ProductTypeManager();
   <body>
 
 <div id="container">
-
+	<?php
+		if(isset($_SESSION['currentUser'])){
+			
+			$oCustomer = new Customer();
+			$oCustomer->load($_SESSION['currentUser']);
+			echo '<p class="logout">Welcome '.$oCustomer->firstname.'! <a href="logout.php">(Log Out)</a></p>';
+		}
+	?>
 
 	<div id="header">
 
-		<a href="home.php" id="logo">T Online</a>
+		<a href="home.php" id="logo">T-Shop.co.nz</a>
 
 		<?php echo $oMV->render($oPTM->getAllProductTypes()); ?>
 
 		<ul id="userNav">
 
 			<li id="loginRegister">
-				<a href="login.php">LOGIN / REGISTER</a>
+				<?php
+				if(!isset($_SESSION['currentUser'])){
+					echo '<a href="login.php">LOGIN / REGISTER</a>';
+				}else{
+					echo '<a href="mydetails.php">MY DETAILS</a>';
+				}
+				?>
 			</li>
 
 			<li id="cart">

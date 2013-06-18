@@ -11,7 +11,6 @@
 		//$oForm->checkRequired("firstname");
 		//$oForm->checkRequired("lastname");
 		$oForm->checkRequired("email");
-		$oForm->checkRequired("phone");
 		$oForm->checkRequired("address");
 		$oForm->checkRequired("password");
 

@@ -19,7 +19,7 @@
 		?>
 	</div>
 
-
+<div class="clear"></div>
 	
 <?php
 	require_once("includes/footer.php");
